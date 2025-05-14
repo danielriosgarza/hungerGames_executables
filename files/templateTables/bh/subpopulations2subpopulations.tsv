@@ -1,0 +1,6 @@
+id	subpopulation_A	subpopulation_B	hillFunc	rate
+1	xa	xb	""	0.001
+2	xb	xa	""	0.001
+3	xa	xc	""	0.001
+4	xb	xc	""	0.001
+5	xc	xd	""	0.001
