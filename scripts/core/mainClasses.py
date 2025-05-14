@@ -287,7 +287,7 @@ class Subpopulation:
         self.intrinsicMetabolism = self.__getIntrMetabolism()
     
     def __getpHSensitivity(self):
-        if (self.pHalpha == 0) or (self.pHbeta == 0):
+        if (self.pHalpha == 0):
             return 0.0
         self.pHbeta = (self.pHalpha-1)/self.pHopt
         
