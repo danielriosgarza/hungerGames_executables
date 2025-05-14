@@ -113,7 +113,7 @@ def main():
 
     con.commit()
     con.close()
-    print(f"Database created successfully at: {database_name}")
+    print(f"Database created successfully at: {database_path}")
 
 if __name__ == "__main__":
     main()
