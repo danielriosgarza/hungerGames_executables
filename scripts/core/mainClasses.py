@@ -287,13 +287,14 @@ class Subpopulation:
         self.intrinsicMetabolism = self.__getIntrMetabolism()
     
     def __getpHSensitivity(self):
-        if (self.pHalpha == 0):
-            return 0.0
+        
         self.pHbeta = (self.pHalpha-1)/self.pHopt
         
         maxima = self.gammaD(self.pHopt, self.pHalpha, self.pHbeta)
     
         def pHSensitivity(pH):
+            if self.pHalpha == 0:
+                return 0.0
             return (1/maxima) * self.gammaD(pH, self.pHalpha, self.pHbeta)
         
         return pHSensitivity
