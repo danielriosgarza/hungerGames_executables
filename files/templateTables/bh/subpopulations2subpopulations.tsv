@@ -1,6 +1,6 @@
 id	subpopulation_A	subpopulation_B	hillFunc	rate
-1	xa	xb	""	0.001
-2	xb	xa	""	0.001
-3	xa	xc	""	0.001
-4	xb	xc	""	0.001
-5	xc	xd	""	0.001
+1	xa	xb	(4.572019894399926e-08/(4.572019894399926e-08 + metObj.metD['trehalose'].concentration**1.0))	0.0250945181446201
+2	xb	xa	(metObj.metD['trehalose'].concentration**50.0)/(metObj.metD['trehalose'].concentration**50.0 + 0.21**50.0)	1.5
+3	xa	xc	""	1.00000001089118e-05
+4	xb	xc	(5.039756128760216e-12/(5.039756128760216e-12 + ((metObj.metD['glucose'].concentration + metObj.metD['glutamate'].concentration - ((metObj.metD['glucose'].concentration - metObj.metD['glutamate'].concentration)**2)**0.5)/2)**2.905545698700455))	0.296037454250935
+5	xc	xd	""	0.0355569688407506
