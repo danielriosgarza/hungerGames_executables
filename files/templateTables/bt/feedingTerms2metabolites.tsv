@@ -1,0 +1,11 @@
+id	feedingTerm	metabolite	yield	monodK
+11	xe_pyruvate	pyruvate	1	0.5
+12	xe_pyruvate	acetate	-1	0
+13	xe_pyruvate	lactate	-1	0
+14	xe_pyruvate	formate	-1	0
+15	xe_glucose	glucose	1	0.5
+16	xe_glucose	acetate	-1	0
+17	xe_glucose	succinate	-1	0
+18	xf_mannose	mannose	1	0.5
+19	xf_mannose	acetate	-1	0
+20	xf_mannose	succinate	-1	0
