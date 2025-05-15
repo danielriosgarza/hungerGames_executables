@@ -1,5 +1,5 @@
 id	species	mumax	pHoptimal	pHalpha	count	color	state
-xe	bt	1	7	100	0.0212	#ff8300	active
-xf	bt	1	7	100	0	#ff8300	active
-xg	bt	0	7	100	0	#ff8300	inactive
-xh	bt	0	7	100	0	#ff8300	dead
+xe	bt	0.921545925347679	7.50781204646088	59.8234299511971	0.00681333333333333	#ff8300	active
+xf	bt	1.19650735112007	6.98409464439697	71.8163993347422	0	#ff8300	active
+xg	bt	0	7	0	0	#ff8300	inactive
+xh	bt	0	7	0	0	#ff8300	dead
