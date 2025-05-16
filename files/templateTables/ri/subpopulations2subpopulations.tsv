@@ -1,6 +1,6 @@
 id	subpopulation_A	subpopulation_B	hillFunc	rate
-11	xi	xj	((metObj.metD['lactate'].concentration+metObj.metD['acetate'].concentration)**29.999999995820815/((metObj.metD['lactate'].concentration+metObj.metD['acetate'].concentration)**29.999999995820815 + 106497287213.48439))	0.0219468232994106
-12	xi	xl	(0.0018485415171027144/(0.0018485415171027144 + (metObj.metD['glucose'].concentration + metObj.metD['pyruvate'].concentration)**1.112377808373694))	1.99999999995584
-13	xj	xk	""	0.00999999999969873
-14	xk	xl	""	1.00000000013323e-05
-15	xj	xi	((metObj.metD['glucose'].concentration + metObj.metD['pyruvate'].concentration)**50/((metObj.metD['glucose'].concentration + metObj.metD['pyruvate'].concentration)**50 + 8.0**50))	0.1
+11	xi	xj	((metObj.metD['lactate'].concentration+metObj.metD['acetate'].concentration)**29.999999995820815/((metObj.metD['lactate'].concentration+metObj.metD['acetate'].concentration)**29.999999995820815 + 106497287213.48439))	0.0219468232
+12	xi	xl	(0.0018485415171027144/(0.0018485415171027144 + (metObj.metD['glucose'].concentration + metObj.metD['pyruvate'].concentration)**1.112377808373694))	1.9999999999
+13	xj	xk	""	0.0099999999
+14	xk	xl	""	0.0000100000
+15	xj	xi	((metObj.metD['glucose'].concentration + metObj.metD['pyruvate'].concentration)**50/((metObj.metD['glucose'].concentration + metObj.metD['pyruvate'].concentration)**50 + 8.0**50))	0.1000000000
