@@ -1,0 +1,12 @@
+id	feedingTerm	metabolite	yield	monodK
+21	xi_pyruvate	pyruvate	1	0.5
+22	xi_pyruvate	acetate	-1	0
+23	xi_pyruvate	butyrate	-1	0
+24	xi_glucose	glucose	1	0.5
+25	xi_glucose	acetate	-1	0
+26	xi_glucose	lactate	-1	0
+27	xi_glucose	butyrate	-1	0
+28	xj_lactate	lactate	1	0.5
+29	xj_lactate	butyrate	-1	0
+30	xj_acetate	acetate	1	0.5
+31	xj_acetate	butyrate	-1	0.5
