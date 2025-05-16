@@ -1,6 +1,6 @@
 id	subpopulation_A	subpopulation_B	hillFunc	rate
 6	xe	xf	(0.009888417149335424/(0.009888417149335424 + (metObj.metD['glucose'].concentration**1.0006644305823313))) * (metObj.metD['mannose'].concentration**1.0022092044096504/(metObj.metD['mannose'].concentration**1.0022092044096504 + 0.5091880088694485))	1.49590777003584
 7	xe	xg	(0.0006423047286233566/(0.0006423047286233566 + (metObj.metD['glucose'].concentration**1.4599162310328717)))*(5.5**10)/((metObj.pH**10)+(5.5**10))	0.957553204878953
-8	xf	xg	(1/(1 + (metObj.metD['mannose'].concentration**29.999999996778822)))*(5.5**10)/((metObj.pH**10)+(5.5**10))	0.0765445031995982
+8	xf	xg	(4.490455008179964e-18/(4.490455008179964e-18 + (metObj.metD['mannose'].concentration**29.999999996778822)))*(5.5**10)/((metObj.pH**10)+(5.5**10))	0.0765445031995982
 9	xg	xh	""	0.00445682719241678
 10	xf	xe	((metObj.metD['glucose'].concentration)**10/((metObj.metD['glucose'].concentration)**10 + 0.5**10))	0.0001
