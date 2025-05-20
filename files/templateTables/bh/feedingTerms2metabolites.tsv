@@ -1,7 +1,7 @@
 id	feedingTerm	metabolite	yield	monodK
 1	xa_trehalose	trehalose	1.2417775764	0.2876080490
 2	xa_trehalose	lactate	-2.9999999999	0
-3	xa_trehalose	acetate	-1.5969447986e-12	0
+3	xa_trehalose	acetate	-0.0000000001	0
 4	xa_pyruvate	pyruvate	1.0000000000	2.3916509762
 5	xa_pyruvate	acetate	-1.8699494242	0
 6	xb_glucose_glutamate	glucose	3.7638796806	0.1039681099
