@@ -1,4 +1,4 @@
-id	name	genomeSize	geneNumber	patricID	ncbiID
-bh	Blautia hydrogenotrophica DSM 10507	3626943	3869	476272.21	476272
-bt	Bacteroides thetaiotaomicron  VPI-5482	6293399	4816	226186.12	226186
-ri	Roseburia intestinalis L1-82	4493348	4067	536231.75	536231
+id	name	genomeSize	geneNumber	patricID	ncbiID	color
+bh	Blautia hydrogenotrophica DSM 10507	3626943	3869	476272.21	476272	#FF10F0
+bt	Bacteroides thetaiotaomicron  VPI-5482	6293399	4816	226186.12	226186	#ff8300
+ri	Roseburia intestinalis L1-82	4493348	4067	536231.75	536231	#00B8FF
