@@ -1,0 +1,33 @@
+#	Species	Parameter	Symbol	Value	Description	min	max
+1	Bh	xa_mumax	"?max,xa"	0.192793481	Maximum growth rate of xa	0.019279348	1.927934811
+2	Bh	xb_mumax	"?max,xb"	0.978104098	Maximum growth rate of xb	0.09781041	9.78104098
+3	Bh	xa_pHopt	pxa	6.818018847	xa optimal pH	0.681801885	68.18018847
+4	Bh	xb_pHopt	pxb	6.53959606	xb optimal pH	0.653959606	65.3959606
+5	Bh	xa_pHalpha	?xa	46.2739563	xa pH sensitivity	4.62739563	462.739563
+6	Bh	xb_pHalpha	?xb	62.51890112	xb pH sensitivity	6.251890112	625.1890112
+7	Bh	xa_k_s1	"Kxa,s1"	0.287608049	Monod constant for trehalose (s1) consumption by xa	0.028760805	2.87608049
+8	Bh	xa_k_s2	"Kxa,s2"	2.391650976	Monod constant for pyruvate (s2) consumption by xa	0.239165098	23.91650976
+9	Bh	xb_k_s3	"Kxb,s3"	0.10396811	Monod constant for glucose (s3) consumption by xb	0.010396811	1.039681099
+10	Bh	xb_k_s4	"Kxb,s4"	1.27004849	Monod constant for glutamate (s4) consumption by xb	0.127004849	12.7004849
+11	Bh	xb_k_s2	"Kxb,s2"	0.5	Monod constant for pyruvate (s2) consumption by xb	0.05	5
+12	Bh	xa_g_s1	"?xa,s1"	1.241777576	Stoichiometric constant for trehalose (s1) consumption by xa	0.124177758	12.41777576
+13	Bh	xa_g_s2	"?xa,s2"	1	Stoichiometric constant for pyruvate (s2) consumption by xa	0.1	10
+14	Bh	xa_g_s6_s1	"?xa,s6,s1"	-1E-10	Acetate (s6) production from xa consuming trehalose (s1)	-1E-11	-0.000000001
+15	Bh	xa_g_s5_s1	"?xa,s5,s1"	-3	Lactate (s5) production from xa consuming trehalose (s1)	-0.3	-30
+16	Bh	xa_g_s6_s2	"?xa,s6,s2"	-1.869949424	Acetate (s6) production from xa consuming pyruvate (s2)	-0.186994942	-18.69949424
+17	Bh	xb_g_s3	"?xb,s3"	3.763879681	Stoichiometric constant for glucose (s3) consumption by xb	0.376387968	37.63879681
+18	Bh	xb_g_s4	"?xb,s4"	0.5	Stoichiometric constant for glutamate (s4) consumption by xb	0.05	5
+19	Bh	xb_g_s2	"?xb,s2"	10	Stoichiometric constant for pyruvate (s2) consumption by xb	1	100
+20	Bh	xb_g_s6_s3_s4	"?xb,s6,s3,s4"	-3	Acetate (s6) production from xb consuming glucose (s3) and glutamate (s4)	-0.3	-30
+21	Bh	xb_g_s6_s2	"?xb,s6,s2"	-5	Acetate (s6) production from xb consuming pyruvate (s2)	-0.5	-50
+22	Bh	z1_r	r1	0.025094518	Rate of transition from xa to xb	0.002509452	0.250945181
+23	Bh	z2_r	r2	1.5	Rate of transition from xb to xa	0.15	15
+24	Bh	z3_r	r3	0.00001	Rate of transition from xa to xc	0.000001	0.0001
+25	Bh	z4_r	r4	0.296037454	Rate of transition from xb to xc	0.029603745	2.960374542
+26	Bh	z5_r	r5	0.035556969	Rate of transition from xc to xd	0.003555697	0.355569688
+27	Bh	z1_l_s1	"l1,s1"	4.57E-08	Half saturation constant for trehalose (s1) in the transition function Z1	4.57E-09	0.000000457
+28	Bh	z2_l_s1	"l2,s1"	0.21	Half saturation constant for trehalose (s1) in the transition function Z2	0.021	2.1
+29	Bh	z4_l_s3_s4	"l4,s3,s4"	0.000129335	Half saturation constant for glucose (s3) and glutamate (s4) in the transition function Z4	1.29335E-05	0.001293346
+30	Bh	z1_h_s1	"h1,s1"	1	Hill coefficient for trehalose (s1) in the transition function Z1	0.1	10
+31	Bh	z2_h_s1	"h2,s1"	50	Hill coefficient for trehalose (s1) in the transition function Z2	5	500
+32	Bh	z4_h_s3_s4	"h4,s3,s4"	2.905545699	Hill coefficient for glucose (s3) and glutamate (s4) in the transition function Z4	0.29055457	29.05545699
