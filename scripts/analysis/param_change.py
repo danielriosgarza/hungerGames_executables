@@ -169,8 +169,8 @@ def update_Bh_Params(parameter, new_value, reactor):
     
     #30
     elif parameter == 'z1_h_s1':
-        current = reactor.microbiome.bacteria['bh'].connections['xb'][1][:]
-        reactor.microbiome.bacteria['bh'].connections['xb'][1] = (current[0], getTransitionFunction(f"(0.0001293346**{new_value}/(0.0001293346**{new_value} + ((metObj.metD['glucose'].concentration + metObj.metD['glutamate'].concentration - ((metObj.metD['glucose'].concentration - metObj.metD['glutamate'].concentration)**2)**0.5)/2)**{new_value}))"), current[2])
+        current = reactor.microbiome.bacteria['bh'].connections['xa'][0][:]
+        reactor.microbiome.bacteria['bh'].connections['xa'][0] = (current[0], getTransitionFunction(f"(4.572019894399926e-08**{new_value}/(4.572019894399926e-08 + metObj.metD['trehalose'].concentration**{new_value}))"), current[2])
         return reactor
     
     #31
