@@ -1,0 +1,103 @@
+#	Species	Parameter	Value	Description
+1	Bh	xa_mumax	0.1927934811	Maximum growth rate of xa
+2	Bh	xb_mumax	0.9781040980	Maximum growth rate of xb
+3	Bh	xa_pHopt	6.8180188470	xa optimal pH
+4	Bh	xb_pHopt	6.5395960604	xb optimal pH
+5	Bh	xa_pHalpha	46.2739563004	xa pH sensitivity
+6	Bh	xb_pHalpha	62.5189011214	xb pH sensitivity
+7	Bh	xa_k_s1	0.2876080490	Monod constant for trehalose (s1) consumption by xa
+8	Bh	xa_k_s2	2.3916509762	Monod constant for pyruvate (s2) consumption by xa
+9	Bh	xb_k_s3	0.1039681099	Monod constant for glucose (s3) consumption by xb
+10	Bh	xb_k_s4	1.2700484896	Monod constant for glutamate (s4) consumption by xb
+11	Bh	xb_k_s2	0.5000000000	Monod constant for pyruvate (s2) consumption by xb
+12	Bh	xa_g_s1	1.2417775764	Stoichiometric constant for trehalose (s1) consumption by xa
+13	Bh	xa_g_s2	1.0000000000	Stoichiometric constant for pyruvate (s2) consumption by xa
+14	Bh	xa_g_s6_s1	-0.0000000001	Acetate (s6) production from xa consuming trehalose (s1)
+15	Bh	xa_g_s5_s1	-2.9999999999	Lactate (s5) production from xa consuming trehalose (s1)
+16	Bh	xa_g_s6_s2	-1.8699494242	Acetate (s6) production from xa consuming pyruvate (s2)
+17	Bh	xb_g_s3	3.7638796806	Stoichiometric constant for glucose (s3) consumption by xb
+18	Bh	xb_g_s4	0.5000000000	Stoichiometric constant for glutamate (s4) consumption by xb
+19	Bh	xb_g_s2	10.0000000000	Stoichiometric constant for pyruvate (s2) consumption by xb
+20	Bh	xb_g_s6_s3_s4	-2.9999999999	Acetate (s6) production from xb consuming glucose (s3) and glutamate (s4)
+21	Bh	xb_g_s6_s2	-4.9999999999	Acetate (s6) production from xb consuming pyruvate (s2)
+22	Bh	z1_r	0.0250945181	Rate of transition from xa to xb
+23	Bh	z2_r	1.5000000000	Rate of transition from xb to xa
+24	Bh	z3_r	0.0000100000	Rate of transition from xa to xc
+25	Bh	z4_r	0.2960374542	Rate of transition from xb to xc
+26	Bh	z5_r	0.0355569688	Rate of transition from xc to xd
+27	Bh	z1_l_s1	0.0000000457	Half saturation constant for trehalose (s1) in the transition function Z1
+28	Bh	z2_l_s1	0.2100000000	Half saturation constant for trehalose (s1) in the transition function Z2
+29	Bh	z4_l_s3_s4	0.0001293346	Half saturation constant for glucose (s3) and glutamate (s4) in the transition function Z4
+30	Bh	z1_h_s1	1.0000000000	Hill coefficient for trehalose (s1) in the transition function Z1
+31	Bh	z2_h_s1	50.0000000000	Hill coefficient for trehalose (s1) in the transition function Z2
+32	Bh	z4_h_s3_s4	2.9055456987	Hill coefficient for glucose (s3) and glutamate (s4) in the transition function Z4
+33	Bt	xe_mumax	0.9215459253	Maximum growth rate of xe
+34	Bt	xf_mumax	1.1965073511	Maximum growth rate of xf
+35	Bt	xe_pHopt	7.5078120464	xe optimal pH
+36	Bt	xf_pHopt	6.9840946443	xf optimal pH
+37	Bt	xe_pHalpha	59.8234299511	xe pH sensitivity
+38	Bt	xf_pHalpha	71.8163993347	xf pH sensitivity
+39	Bt	xe_k_s3	0.3530205777	Monod constant for glucose (s3) consumption by xe
+40	Bt	xe_k_s2	9.9999999149	Monod constant for pyruvate (s2) consumption by xe
+41	Bt	xf_k_s7	0.1059821090	Monod constant for mannose (s7) consumption by xf
+42	Bt	xe_g_s2	2.9010309178	Stoichiometric constant for pyruvate (s2) consumption by xe
+43	Bt	xe_g_s3	1.0269754623	Stoichiometric constant for glucose (s3) consumption by xe
+44	Bt	xe_g_s5_s2	-1.7181885318	Lactate (s5) production from xe consuming pyruvate (s2)
+45	Bt	xe_g_s6_s2	-0.2602947550	Acetate (s6) production from xe consuming pyruvate (s2)
+46	Bt	xe_g_s6_s3	-0.9965936487	Acetate (s6) production from xe consuming glucose (s3)
+47	Bt	xe_g_s8_s3	-0.6252715462	Succinate (s8) production by xe consuming glucose (s3)
+48	Bt	xe_g_s9_s2	-0.6158861983	Formate (s9) production by xe consuming pyruvate (s2)
+49	Bt	xf_g_s7	0.4040233680	Stoichiometric constant for mannose (s7) consumption by xf
+50	Bt	xf_g_s6_s7	-0.8532416313	Acetate (s6) production from xf consuming mannose (s7)
+51	Bt	xf_g_s8_s7	-2.0255236699	Succinate (s8) production by xf consuming mannose (s7)
+52	Bt	z6_r	1.4959077700	Rate of transition from xe to xf
+53	Bt	z7_r	0.9575532048	Rate of transition from xe to xg
+54	Bt	z8_r	0.0765445031	Rate of transition from xf to xg
+55	Bt	z9_r	0.0044568271	Rate of transition from xg to xh
+56	Bt	z10_r	0.0001000000	Rate of transition from xf to xe
+57	Bt	z6_l_s3	0.0099187739	Half-saturation constant for glucose (s3) in the transition function Z6
+58	Bt	z6_l_s7	0.5099461371	Half-saturation constant for mannose (s7) in the transition function Z6
+59	Bt	z7_l_s3	0.0065072254	Half-saturation constant for glucose (s3) in the transition function Z7
+60	Bt	z7_l_pH	5.5000000000	Half-saturation constant for pH in the transition function Z7
+61	Bt	z8_l_s7	0.0000007162	Half-saturation constant for mannose (s7) in the transition function Z8
+62	Bt	z8_l_pH	5.5000000000	Half-saturation constant for pH in the transition function Z8
+63	Bt	z10_l_s3	0.5000000000	Half-saturation constant for glucose (s3) in the transition function Z10
+64	Bt	z6_h_s3	1.0006644305	Hill coefficient for glucose (s3) in the transition function Z6
+65	Bt	z6_h_s7	1.0022092044	Hill coefficient for mannose (s7) in the transition function Z6
+66	Bt	z7_h_s3	1.4599162310	Hill coefficient for glucose (s3) in the transition function Z7
+67	Bt	z7_h_pH	10.0000000000	Hill coefficient for pH in the transition function Z7
+68	Bt	z8_h_s7	29.9999999967	Hill coefficient for mannose (s7) in the transition function Z8
+69	Bt	z8_h_pH	10.0000000000	Hill coefficient for pH in the transition function Z8
+70	Bt	z10_h_s3	10.0000000000	Hill coefficient for glucose (s3) in the transition function Z10
+71	Ri	xi_mumax	0.7059668140	Maximum growth rate of xi
+72	Ri	xj_mumax	0.0153451944	Maximum growth rate of xj
+73	Ri	xi_pHopt	7.7682760382	xi optimal pH
+74	Ri	xj_pHopt	7.6243042258	xj optimal pH
+75	Ri	xi_pHalpha	39.5255968898	xi pH sensitivity
+76	Ri	xj_pHalpha	19.9999998098	xj pH sensitivity
+77	Ri	xi_k_s2	0.5475232775	Monod constant for pyruvate (s2) consumption by xi
+78	Ri	xi_k_s3	6.8653726711	Monod constant for glucose (s3) consumption by xi
+79	Ri	xj_k_s5	9.9994578496	Monod constant for lactate (s5) consumption by xj
+80	Ri	xj_k_s6	0.2756122752	Monod constant for acetate (s6) consumption by xj
+81	Ri	xi_g_s2	2.7837513180	Stoichiometric constant for pyruvate (s2) consumption by xi
+82	Ri	xi_g_s3	1.7594802851	Stoichiometric constant for glucose (s3) consumption by xi
+83	Ri	xj_g_s5	1.9604511472	Stoichiometric constant for lactate (s5) consumption by xj
+84	Ri	xj_g_s6	0.8533874512	Stoichiometric constant for acetate (s6) consumption by xj
+85	Ri	xi_g_s5_s3	-0.3774439538	Stoichiometric constant for lactate (s5) production from xi consuming glucose (s3)
+86	Ri	xi_g_s6_s2	-0.3051280298	Stoichiometric constant for acetate (s6) production from xi consuming pyruvate (s2)
+87	Ri	xi_g_s6_s3	-0.7276644727	Stoichiometric constant for acetate (s6) production from xi consuming glucose (s3)
+88	Ri	xi_g_s10_s2	-1.9948315995	Stoichiometric constant for butyrate (s10) production by xi consuming pyruvate (s2)
+89	Ri	xi_g_s10_s3	0.0000000000	Stoichiometric constant for butyrate (s10) production by xi consuming glucose (s3)
+90	Ri	xj_g_s10_s5	-2.9881962700	Stoichiometric constant for butyrate (s10) production by xj consuming lactate (s5)
+91	Ri	xj_g_s10_s6	-0.0000000020	Stoichiometric constant for butyrate (s10) production by xj consuming acetate (s6)
+92	Ri	z11_r	0.0219468232	Rate of transition from xi to xj
+93	Ri	z12_r	1.9999999999	Rate of transition from xi to xl
+94	Ri	z13_r	0.0099999999	Rate of transition from xj to xk
+95	Ri	z14_r	0.0000100000	Rate of transition from xk to xl
+96	Ri	z15_r	0.1000000000	Rate of transition from xj to xi
+97	Ri	z11_l_s5_s6	2.3311915035	Half-saturation constant for lactate (s5) and acetate (s4) in the transition functions z11
+98	Ri	z12_l_s3_s2	0.0034909802	Half-saturation constant for glucose (s3) and pyruvate (s2) in the transition functions z12
+99	Ri	z15_l_s3_s2	8.0000000000	Half-saturation constant for glucose (s3) and pyruvate (s2) in the transition functions z15
+100	Ri	z11_h_s5_s6	29.9999999958	Hill coefficient for lactate (s5) and acetate (s6) in the transition functions z11
+101	Ri	z12_h_s3_s2	1.1123778083	Hill coefficient for glucose (s3) and pyruvate (s2) in the transition functions z12
+102	Ri	z15_h_s3_s2	50.0000000000	Hill coefficient for glucose (s3) and pyruvate (s2) in the transition functions z15
