@@ -15,7 +15,7 @@ def getTransitionFunction(statement):
     
 
 
-def update_Bh_Params(parameter, new_value, reactor):
+def update_bh_Params(parameter, new_value, reactor):
     
     #1
     if parameter == 'xa_mumax':
@@ -187,7 +187,7 @@ def update_Bh_Params(parameter, new_value, reactor):
    
 
 
-def update_Bh_Params(parameter, new_value, reactor):
+def update_bt_Params(parameter, new_value, reactor):
     
     #33
     if parameter == 'xe_mumax':
@@ -396,7 +396,7 @@ def update_Bh_Params(parameter, new_value, reactor):
         return reactor
 
 
-def update_Bh_Params(parameter, new_value, reactor):
+def update_ri_Params(parameter, new_value, reactor):
     
     #71
     if parameter == 'xi_mumax':
