@@ -568,7 +568,7 @@ def update_ri_Params(parameter, new_value, reactor):
     #102
     if parameter == 'z15_h_s3_s2':
         current = reactor.microbiome.bacteria['ri'].connections['xj'][1][:]
-        reactor.microbiome.bacteria['ri'].connections['xj'][1] = (current[0], getTransitionFunction(f"((metObj.metD['glucose'].concentration + metObj.metD['pyruvate'].concentration)**{new_value}/((metObj.metD['glucose'].concentration + metObj.metD['pyruvate'].concentration)**{new_value} + 8.0**{new_value}))"), current[1])
+        reactor.microbiome.bacteria['ri'].connections['xj'][1] = ('xi', getTransitionFunction(f"((metObj.metD['glucose'].concentration + metObj.metD['pyruvate'].concentration)**{new_value}/((metObj.metD['glucose'].concentration + metObj.metD['pyruvate'].concentration)**{new_value} + 8.0**{new_value}))"), new_value)
         return reactor
 
 
