@@ -406,6 +406,7 @@ def update_ri_Params(parameter, new_value, reactor):
     #72
     if parameter == 'xj_mumax':
         reactor.microbiome.subpopD['xj'].mumax = new_value
+        return reactor
         
     #73
     if parameter == 'xi_pHopt':
