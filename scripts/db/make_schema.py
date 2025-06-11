@@ -42,6 +42,13 @@ def main():
     )""")
 
     cur.execute("""
+    CREATE TABLE IF NOT EXISTS wc (
+        metabolite TEXT PRIMARY KEY UNIQUE,
+        concentration REAL NOT NULL,
+        FOREIGN KEY (metabolite) REFERENCES metabolites (id)
+    )""")
+    
+    cur.execute("""
     CREATE TABLE IF NOT EXISTS wc_media (
         metabolite TEXT PRIMARY KEY UNIQUE,
         concentration REAL NOT NULL,
