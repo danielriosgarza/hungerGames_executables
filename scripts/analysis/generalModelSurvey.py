@@ -14,6 +14,7 @@ import matplotlib.pyplot as plt
 import matplotlib as mpl
 mpl.rcParams.update({'font.family':'sans-serif', 'font.sans-serif':['DejaVu Sans']})
 
+sys.path.append(os.getcwd())
 sys.path.append(os.path.join(Path(os.getcwd()).parents[0], 'db'))
 sys.path.append(os.path.join(Path(os.getcwd()).parents[0], 'core'))
 sys.path.append(os.path.join(Path(os.getcwd()).parents[1], 'files'))
