@@ -252,7 +252,7 @@ for ph in tqdm(pH_points):
 
 
 
-pH_points = np.linspace(5,6.5,5)
+pH_points = np.linspace(5,6.5,PHSIMULATIONS)
 dilution_rate_points = np.linspace(0,3,DILUTIONSIMULATIONS)/15
 
 
