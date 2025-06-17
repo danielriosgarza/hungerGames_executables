@@ -200,14 +200,14 @@ def plotSpecies(simulated_reactor_obj,
 def pH_f(metabolome):
   return 5.60
 
-reactor = get_reactor(species = ['bh', 'bt', 'ri'], dilutionFactor=0.615, time =2500)
+reactor = get_reactor(species = ['bh', 'bt', 'ri'], dilutionFactor=0.615, time =3000)
 
 reactor.microbiome.subpopD['xa'].count = 0.003
-reactor.microbiome.subpopD['xb'].count = 0.0001
+#reactor.microbiome.subpopD['xb'].count = 0.0001
 reactor.microbiome.subpopD['xe'].count = 0.003
-reactor.microbiome.subpopD['xf'].count = 0.0001
+#reactor.microbiome.subpopD['xf'].count = 0.0001
 reactor.microbiome.subpopD['xi'].count = 0.003
-reactor.microbiome.subpopD['xj'].count = 0.0001
+#reactor.microbiome.subpopD['xj'].count = 0.0001
 
 
 
@@ -217,16 +217,16 @@ reactor.simulate()
 #mpl.rcParams.update({'font.family':'sans-serif', 'font.sans-serif':['DejaVu Sans']})
 fileName = os.path.join(Path(os.getcwd()).parents[1], 'files', 'Figures', '0.041_with_transition.png')
 plotSpecies(reactor, fileName=fileName)
+#####################################################################
 
-
-reactor = get_reactor(species = ['bh', 'bt', 'ri'], dilutionFactor=0.585, time =2500)
+reactor = get_reactor(species = ['bh', 'bt', 'ri'], dilutionFactor=0.585, time =3000)
 
 reactor.microbiome.subpopD['xa'].count = 0.003
-reactor.microbiome.subpopD['xb'].count = 0.0001
+#reactor.microbiome.subpopD['xb'].count = 0.0001
 reactor.microbiome.subpopD['xe'].count = 0.003
-reactor.microbiome.subpopD['xf'].count = 0.0001
+#reactor.microbiome.subpopD['xf'].count = 0.0001
 reactor.microbiome.subpopD['xi'].count = 0.003
-reactor.microbiome.subpopD['xj'].count = 0.0001
+#reactor.microbiome.subpopD['xj'].count = 0.0001
 
 
 
@@ -236,6 +236,8 @@ reactor.simulate()
 #mpl.rcParams.update({'font.family':'sans-serif', 'font.sans-serif':['DejaVu Sans']})
 fileName = os.path.join(Path(os.getcwd()).parents[1], 'files', 'Figures', '0.039_with_transition.png')
 plotSpecies(reactor, fileName=fileName)
+
+##################################################################################
 
 dilutionFactor = 0.041*15
 
@@ -269,13 +271,230 @@ reactor = get_reactor(species = ['bh', 'bt', 'ri'],
                       pulses=[pulse1, pulse2, pulse3])
 
 reactor.microbiome.subpopD['xa'].count = 0.003
-reactor.microbiome.subpopD['xb'].count = 0.0001
+#reactor.microbiome.subpopD['xb'].count = 0.0001
 reactor.microbiome.subpopD['xe'].count = 0.003
-reactor.microbiome.subpopD['xf'].count = 0.0001
+#reactor.microbiome.subpopD['xf'].count = 0.0001
 reactor.microbiome.subpopD['xi'].count = 0.003
-reactor.microbiome.subpopD['xj'].count = 0.0001
+#reactor.microbiome.subpopD['xj'].count = 0.0001
+
+
+reactor.simulate()
+fileName = os.path.join(Path(os.getcwd()).parents[1], 'files', 'Figures', 'dilution_histeresis_with_transition.png')
+plotSpecies(reactor)
+
+##########################################
+
+def pH_f(metabolome):
+  return 5.47
+
+reactor = get_reactor(species = ['bh', 'bt', 'ri'], dilutionFactor=1.0, time =3000, pHFunc = pH_f)
+
+reactor.microbiome.subpopD['xa'].count = 0.003
+#reactor.microbiome.subpopD['xb'].count = 0.0001
+reactor.microbiome.subpopD['xe'].count = 0.003
+#reactor.microbiome.subpopD['xf'].count = 0.0001
+reactor.microbiome.subpopD['xi'].count = 0.003
+#reactor.microbiome.subpopD['xj'].count = 0.0001
+
 
 
 reactor.simulate()
 
-plotSpecies(reactor)
+#to avoid warning from the colab notebook
+#mpl.rcParams.update({'font.family':'sans-serif', 'font.sans-serif':['DejaVu Sans']})
+fileName = os.path.join(Path(os.getcwd()).parents[1], 'files', 'Figures', 'pH_5.47_with_transition.png')
+plotSpecies(reactor, fileName=fileName)
+
+##########################################
+
+def pH_f(metabolome):
+  return 5.50
+
+reactor = get_reactor(species = ['bh', 'bt', 'ri'], dilutionFactor=1.0, time =3000, pHFunc = pH_f)
+
+reactor.microbiome.subpopD['xa'].count = 0.003
+#reactor.microbiome.subpopD['xb'].count = 0.0001
+reactor.microbiome.subpopD['xe'].count = 0.003
+#reactor.microbiome.subpopD['xf'].count = 0.0001
+reactor.microbiome.subpopD['xi'].count = 0.003
+#reactor.microbiome.subpopD['xj'].count = 0.0001
+
+
+
+reactor.simulate()
+
+#to avoid warning from the colab notebook
+#mpl.rcParams.update({'font.family':'sans-serif', 'font.sans-serif':['DejaVu Sans']})
+fileName = os.path.join(Path(os.getcwd()).parents[1], 'files', 'Figures', 'pH_5.50_with_transition.png')
+plotSpecies(reactor, fileName=fileName)
+
+
+
+##########################################
+
+def pH_f(metabolome):
+  return 5.60
+
+reactor = get_reactor(species = ['bh', 'bt', 'ri'], dilutionFactor=1.0, time =3000, pHFunc = pH_f)
+
+reactor.microbiome.subpopD['xa'].count = 0.003
+#reactor.microbiome.subpopD['xb'].count = 0.0001
+reactor.microbiome.subpopD['xe'].count = 0.003
+#reactor.microbiome.subpopD['xf'].count = 0.0001
+reactor.microbiome.subpopD['xi'].count = 0.003
+#reactor.microbiome.subpopD['xj'].count = 0.0001
+
+
+
+reactor.simulate()
+
+#to avoid warning from the colab notebook
+#mpl.rcParams.update({'font.family':'sans-serif', 'font.sans-serif':['DejaVu Sans']})
+fileName = os.path.join(Path(os.getcwd()).parents[1], 'files', 'Figures', 'pH_5.60_with_transition.png')
+plotSpecies(reactor, fileName=fileName)
+
+
+
+################################################################
+def mockpHfunc(metObj, pH=6.5):
+    def pHfunc(metObj):
+        return pH
+    return pHfunc
+
+fixedpH1 = 5.60
+fixedpH2 = 5.47
+
+#getStarting pH
+wc = createMetabolome(db, 'wc_media')
+predictpH = getpH(wc.metabolites, ipH_path)
+fixedpHA = mockpHfunc(wc.metabolites,pH=fixedpH1)
+fixedpHC = mockpHfunc(wc.metabolites,pH=fixedpH2)
+pH =  predictpH(wc.get_concentration())
+
+#get the feed media and the reactor media
+wc_feedA = createMetabolome(db, 'wc_media', pH, pHFunc=fixedpHA)
+wc_feedC = createMetabolome(db, 'wc_media', pH, pHFunc=fixedpHC)
+
+wc_reactorA = createMetabolome(db, 'wc_media', pH, pHFunc=fixedpHA)
+wc_reactorC = createMetabolome(db, 'wc_media', pH, pHFunc=fixedpHC)
+
+
+#get the feed obj. Make it sterile
+feed_microbiome = Microbiome({'bh':createBacteria(db, 'bh', 'wc_media'),
+                              'bt':createBacteria(db, 'bt', 'wc_media'),
+                              'ri':createBacteria(db, 'ri', 'wc_media')})
+feed_microbiome.subpopD['xa'].count = 0
+feed_microbiome.subpopD['xe'].count = 0
+feed_microbiome.subpopD['xi'].count = 0
+
+#create the reactor obj, with starting populations
+reactor_microbiome = Microbiome({'bh':createBacteria(db, 'bh', 'wc_media'),
+                                 'bt':createBacteria(db, 'bt', 'wc_media'),
+                                 'ri':createBacteria(db, 'ri', 'wc_media')})
+reactor_microbiome.subpopD['xa'].count = 0.003
+reactor_microbiome.subpopD['xe'].count = 0.003
+reactor_microbiome.subpopD['xi'].count = 0.003
+
+
+d = 1.0
+
+
+
+
+batchA = Pulse(wc_feedA, feed_microbiome, 0, 600, 100, 0, 0, d,d)
+
+batchB = Pulse(wc_feedC, feed_microbiome, 600, 3000, 100, 0, 0, d,d)
+
+
+#simulate
+reactorA = Reactor(reactor_microbiome, wc_reactorA,[batchA], 15)
+
+
+
+reactorA.simulate()
+#reactorA.makePlots()
+
+
+
+for i in wc_reactorA.metD:
+    wc_reactorC.metD[i].update(wc_reactorA.metD[i].concentration)
+
+
+reactorB = Reactor(reactorA.microbiome, wc_reactorC,[batchB], 15)
+
+reactorB.simulate()
+
+
+print(f"pH {fixedpH1} and {fixedpH2}")
+
+
+makeKineticPlot(x = reactorA.time_simul*0.1,
+                y = reactorA.cellActive_dyn[0],
+                color = '#FF10F0',
+                legend = 'Blautia hydrogenotrophica',
+                xlabel = 'time (h)',
+                ylabel = '$10^5$ cells/uL',
+                title = None,
+                linestyle = '-',
+                legendSize = 10)
+
+makeKineticPlot(x = reactorB.time_simul*0.1,
+                y = reactorB.cellActive_dyn[0],
+                color = '#FF10F0',
+                legend = None,
+                xlabel = 'time (h)',
+                ylabel = '$10^5$ cells/uL',
+                title = None,
+                linestyle = '-',
+                legendSize = 10)
+
+
+
+
+makeKineticPlot(x = reactorA.time_simul*0.1,
+                y = reactorA.cellActive_dyn[1],
+                color = '#ff8300',
+                legend = 'Bacteroides thetaiotaomicron',
+                xlabel = 'time (h)',
+                ylabel = '$10^5$ cells/uL',
+                title = None,
+                linestyle = '-',
+                legendSize = 10)
+
+makeKineticPlot(x = reactorB.time_simul*0.1,
+                y = reactorB.cellActive_dyn[1],
+                color = '#ff8300',
+                legend = None,
+                xlabel = 'time (h)',
+                ylabel = '$10^5$ cells/uL',
+                title = None,
+                linestyle = '-',
+                legendSize = 10)
+
+
+
+makeKineticPlot(x = reactorA.time_simul*0.1,
+                y = reactorA.cellActive_dyn[2],
+                color = '#00B8FF',
+                legend = 'Roseburia instestinalis',
+                xlabel = 'time (h)',
+                ylabel = '$10^5$ cells/uL',
+                title = None,
+                linestyle = '-',
+                legendSize = 10)
+
+makeKineticPlot(x = reactorB.time_simul*0.1,
+                y = reactorB.cellActive_dyn[2],
+                color = '#00B8FF',
+                legend = None,
+                xlabel = 'time (h)',
+                ylabel = '$10^5$ cells/uL',
+                title = None,
+                linestyle = '-',
+                legendSize = 10)
+
+
+title = 'stateA'
+fileName = os.path.join(Path(os.getcwd()).parents[1], 'files', 'Figures', 'pH_hysteresis_with_transition.png')
+plt.savefig(fileName, transparent=True, dpi=600)
+plt.show()

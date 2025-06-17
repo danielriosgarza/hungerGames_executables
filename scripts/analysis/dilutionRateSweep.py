@@ -91,7 +91,7 @@ def makeSimulation(pHControl = None,
     
     #pH profile
     ipH_path = os.path.join(Path(os.getcwd()).parents[1], 'files', 'pH', 'acids_pH.tsv') 
-    databaseName = 'bhbtri_analysis_db.sqlite3'
+    databaseName = 'bhbtri_analysis_db_noTransitions.sqlite3'
     databaseFolder =  os.path.join(Path(os.getcwd()).parents[1], 'files', 'dbs')
 
     #update database with parameters from a file
@@ -142,14 +142,7 @@ def makeSimulation(pHControl = None,
                                                       batchA
                                                        ], 15)
     
-    reactor = update_bh_Params("z1_r", 0.0, reactor)
-    reactor = update_bh_Params("z2_r", 0.0, reactor)
-    
-    reactor = update_bt_Params("z6_r", 0.0, reactor)
-    reactor = update_bt_Params("z10_r", 0.0, reactor)
-    
-    reactor = update_ri_Params("z11_r", 0.0, reactor)
-    reactor = update_ri_Params("z15_r", 0.0, reactor)
+   
     reactor.simulate()
     
     
