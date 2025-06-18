@@ -13,6 +13,8 @@ import numpy as np
 import matplotlib.pyplot as plt
 import matplotlib as mpl
 mpl.rcParams.update({'font.family':'sans-serif', 'font.sans-serif':['DejaVu Sans']})
+from matplotlib.ticker import FormatStrFormatter
+from matplotlib.ticker import MaxNLocator, FormatStrFormatter
 
 from aquarel import load_theme
 
@@ -105,49 +107,53 @@ def get_reactor(species = ['bh'], dilutionFactor = 0, pulses = None, pHFunc = pH
   return reactor
 
 
+from matplotlib.ticker import MaxNLocator
+
+from matplotlib.ticker import MaxNLocator, FormatStrFormatter
+
 def makeKineticPlot(x,
                     y,
                     color,
                     legend,
                     xlabel,
                     ylabel,
-                    title = None,
-                    linestyle = 'o-',
-                    legendSize = 18):
-    '''
-    '$10^5$ cells/uL'
-    'Time (h)'
-    'mM'
+                    title=None,
+                    linestyle='o-',
+                    legendSize=18,
+                    roundDecimals=0):
 
-    '''
-
-    #fig, ax = plt.subplots()
-
-
-    plt.plot(x, y, color=color, linestyle = linestyle, lw=3, alpha = 1.0, label=legend)
+    plt.plot(x, y, color=color, linestyle=linestyle, lw=3, alpha=1.0, label=legend)
 
     if legend is not None:
-      legend_properties = {'size': legendSize}
-      plt.legend(prop=legend_properties,
-                 loc='upper right',        # <-- THIS is the key!
-                 bbox_to_anchor=(1.0, 1.0),# anchor at (x=1, y=1) in Axes coords
-                 bbox_transform=plt.gca().transAxes,
-                 borderaxespad=0.0,        # optional: no extra padding
-                 frameon=True)             # optional: keep the black box
+        legend_properties = {'size': legendSize}
+        plt.legend(prop=legend_properties,
+                   loc='upper right',
+                   bbox_to_anchor=(1.0, 1.0),
+                   bbox_transform=plt.gca().transAxes,
+                   borderaxespad=0.0,
+                   frameon=True)
+
     ax = plt.gca()
 
     ax.set_ylabel(ylabel, fontsize=16)
     ax.set_xlabel(xlabel, fontsize=16)
 
+    ax.tick_params(axis='both', which='major', labelsize=24)
+
+    # Force integer ticks safely
+    ax.xaxis.set_major_locator(MaxNLocator(nbins='auto', integer=True))
+    ax.yaxis.set_major_locator(MaxNLocator(nbins='auto', integer=True))
+
+    # Format as integers
+    ax.xaxis.set_major_formatter(FormatStrFormatter('%d'))
+    ax.yaxis.set_major_formatter(FormatStrFormatter('%d'))
 
     if title is not None:
         plt.title(title, fontsize=16)
 
-
-
-
-
     plt.tight_layout()
+
+
 
 
 def plotSpecies(simulated_reactor_obj, 
@@ -161,9 +167,9 @@ def plotSpecies(simulated_reactor_obj,
   makeKineticPlot(x = time,
                   y = simulated_reactor_obj.cellActive_dyn[0],
                   color = '#FF10F0',
-                  legend = '$\it{Blautia \ hydrogenotrophica}$',
-                  xlabel = 'time (h)',
-                  ylabel = '$10^5$ cells/uL',
+                  legend = None,
+                  xlabel = None,
+                  ylabel = None,
                   title = None,
                   linestyle = '-',
                   legendSize = 10)
@@ -171,18 +177,18 @@ def plotSpecies(simulated_reactor_obj,
   makeKineticPlot(x = time,
                   y = simulated_reactor_obj.cellActive_dyn[1],
                   color = '#ff8300',
-                  legend = '$\it{Bacteroides \ thetaiotaomicron}$',
-                  xlabel = 'time (h)',
-                  ylabel = '$10^5$ cells/uL',
+                  legend = None,
+                  xlabel = None,
+                  ylabel = None,
                   title = None,
                   linestyle = '-',
                   legendSize = 10)
   makeKineticPlot(x = time,
                   y = simulated_reactor_obj.cellActive_dyn[2],
                   color = '#00B8FF',
-                  legend = '$\it{Roseburia \ instestinalis}$',
-                  xlabel = 'time (h)',
-                  ylabel = '$10^5$ cells/uL',
+                  legend = None,
+                  xlabel = None,
+                  ylabel = None,
                   title = None,
                   linestyle = '-',
                   legendSize = 10)
@@ -275,7 +281,7 @@ reactor.microbiome.subpopD['xj'].count = 0.0001
 
 reactor.simulate()
 fileName = os.path.join(Path(os.getcwd()).parents[1], 'files', 'Figures', 'dilution_histeresis_no_transition.png')
-plotSpecies(reactor)
+plotSpecies(reactor, fileName=fileName)
 
 ##########################################
 
@@ -431,9 +437,9 @@ print(f"pH {fixedpH1} and {fixedpH2}")
 makeKineticPlot(x = t_A,
                 y = bh_A,
                 color = '#FF10F0',
-                legend = 'Blautia hydrogenotrophica',
-                xlabel = 'time (h)',
-                ylabel = '$10^5$ cells/uL',
+                legend = None,
+                xlabel = None,
+                ylabel = None,
                 title = None,
                 linestyle = '-',
                 legendSize = 10)
@@ -442,8 +448,8 @@ makeKineticPlot(x = reactorB.time_simul*0.1,
                 y = reactorB.cellActive_dyn[0],
                 color = '#FF10F0',
                 legend = None,
-                xlabel = 'time (h)',
-                ylabel = '$10^5$ cells/uL',
+                xlabel = None,
+                ylabel = None,
                 title = None,
                 linestyle = '-',
                 legendSize = 10)
@@ -454,9 +460,9 @@ makeKineticPlot(x = reactorB.time_simul*0.1,
 makeKineticPlot(x = t_A,
                 y = bt_A,
                 color = '#ff8300',
-                legend = 'Bacteroides thetaiotaomicron',
-                xlabel = 'time (h)',
-                ylabel = '$10^5$ cells/uL',
+                legend = None,
+                xlabel = None,
+                ylabel = None,
                 title = None,
                 linestyle = '-',
                 legendSize = 10)
@@ -465,8 +471,8 @@ makeKineticPlot(x = reactorB.time_simul*0.1,
                 y = reactorB.cellActive_dyn[1],
                 color = '#ff8300',
                 legend = None,
-                xlabel = 'time (h)',
-                ylabel = '$10^5$ cells/uL',
+                xlabel = None,
+                ylabel = None,
                 title = None,
                 linestyle = '-',
                 legendSize = 10)
@@ -476,9 +482,9 @@ makeKineticPlot(x = reactorB.time_simul*0.1,
 makeKineticPlot(x = t_A,
                 y = ri_A,
                 color = '#00B8FF',
-                legend = 'Roseburia instestinalis',
-                xlabel = 'time (h)',
-                ylabel = '$10^5$ cells/uL',
+                legend = None,
+                xlabel = None,
+                ylabel = None,
                 title = None,
                 linestyle = '-',
                 legendSize = 10)
@@ -487,8 +493,8 @@ makeKineticPlot(x = reactorB.time_simul*0.1,
                 y = reactorB.cellActive_dyn[2],
                 color = '#00B8FF',
                 legend = None,
-                xlabel = 'time (h)',
-                ylabel = '$10^5$ cells/uL',
+                xlabel = None,
+                ylabel = None,
                 title = None,
                 linestyle = '-',
                 legendSize = 10)
